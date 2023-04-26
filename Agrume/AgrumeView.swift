@@ -21,7 +21,6 @@ public struct AgrumeView: View {
     public var body: some View {
         WrapperAgrumeView(images: images, startIndex: startIndex, isPresenting: $isPresenting)
             .id(images)
-            .matchedGeometryEffect(id: "AgrumeView", in: namespace, properties: .frame, isSource: isPresenting)
             .ignoresSafeArea()
     }
 }
