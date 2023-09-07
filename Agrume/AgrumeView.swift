@@ -33,9 +33,8 @@ struct WrapperAgrumeView: UIViewControllerRepresentable {
     @Binding var isPresenting: Bool
     
     public func makeUIViewController(context: UIViewControllerRepresentableContext<WrapperAgrumeView>) -> UIViewController {
-        let agrume = Agrume(images: images, startIndex: startIndex, background: .blurred(.regular))
+        let agrume = Agrume(images: images, startIndex: startIndex)
         agrume.view.backgroundColor = .clear
-        agrume.hideStatusBar = false
         agrume.addSubviews()
         agrume.addOverlayView()
         agrume.willDismiss = {
